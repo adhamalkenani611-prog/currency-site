@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="موقع يعرض أسعار العملات مقابل الدولار الأمريكي مع محول عملات مباشر. يدعم البحث عن العملات والتحويل بين أي عملتين بسهولة.">
+  <title>أسعار العملات مقابل الدولار</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>أسعار العملات مقابل الدولار الأمريكي (USD)</h1>
+    <div class="controls">
+      <label for="base">عملة الأساس:</label>
+      <select id="base"></select>
+
+      <label for="search">بحث عن عملة:</label>
+      <input id="search" type="text" placeholder="مثال: EUR، GBP، SAR..." />
+
+      <button id="refresh">تحديث الآن</button>
+    </div>
+  </header>
+
+  <section class="converter">
+  <h2>محول العملات</h2>
+  <div class="convert-box">
+    <input type="number" id="amount" placeholder="أدخل المبلغ" />
+
+    <label for="from">من:</label>
+    <select id="from"></select>
+
+    <label for="to">إلى:</label>
+    <select id="to"></select>
+
+    <button id="convert">تحويل</button>
+  </div>
+  <div id="result" class="result">—</div>
+</section>
+
+  <main>
+    <section class="meta">
+      <div><strong>آخر تحديث:</strong> <span id="updated">—</span></div>
+    </section>
+
+    <section id="rates" class="rates">
+      <!-- سيتم ملء الجدول عبر JavaScript -->
+      <table>
+        <thead>
+          <tr>
+            <th>العملة</th>
+            <th>السعر مقابل <span id="base-label">USD</span></th>
+          </tr>
+        </thead>
+        <tbody id="rates-body"></tbody>
+      </table>
+    </section>
+  
+  </main>
+
+  <footer class="footer">
+  <p>© 2025 موقع أسعار العملات</p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
