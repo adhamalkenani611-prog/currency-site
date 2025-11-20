@@ -154,3 +154,40 @@ main { padding: 24px; }
   font-size: 1.1rem;
   color: var(--accent-2);
 }
+/* ✅ تحسين التصميم على الشاشات الصغيرة */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .convert-box {
+    grid-template-columns: 1fr;
+  }
+
+  .convert-box input,
+  .convert-box select,
+  .convert-box button {
+    width: 100%;
+  }
+
+  .rates table {
+    font-size: 0.9rem;
+  }
+
+  .rates th,
+  .rates td {
+    padding: 8px;
+  }
+
+  .result {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
